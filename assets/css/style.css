@@ -1,0 +1,143 @@
+/* color scheme sourced from http://coolors.co */
+  :root {
+    --background-color: white;
+    --header-color: #A2BCE0;
+    --nav-color: #0B5563;
+    --gray: #5E5C6C;
+    --asparagus: #92AA83;
+  }
+
+  * {
+      font-family:'Lucida Sans', Geneva, sans-serif;
+  }
+
+  p{
+    padding: 5px 0;
+  }
+
+  body{
+      background-color: var(--background-color);
+  }
+
+  header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header h1{
+    background-color: var(--header-color);
+    color: var(--nav-color);
+    font-size: 32px;
+    padding: 25px;
+  }
+
+  header nav{
+    background-color: var(--nav-color);
+    font-size: 24px;
+    padding: 25px;
+  }
+
+  header nav a{
+    display: inline-block;
+    color: var(--header-color);
+    font-weight: bold;
+    padding: 5px 5px 0px 5px;
+    border-bottom: 3px solid;
+    text-decoration: none;
+  }
+
+  figure img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .main-container{
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+  }
+
+  .main-container section{
+    display: flex;
+    flex-direction: column;
+  } 
+
+  .main-container section h2{
+    font-size: 24px;
+    color: var(--nav-color);
+    font-weight: bold;
+    padding: 10px 0px;
+    border-bottom: 3px solid;
+    text-decoration: none;
+  }
+
+  .main-container section div{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+
+  .work-box{
+      width: 100%;
+      border: 2px solid black;
+  }
+
+  /* Adjust display for Tablet */
+  @media screen and (min-width: 768px) {
+    /* on tablets, set columns to only be 50% of the width and not grow */
+    .work-box {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .big-project{
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+  }
+
+  /* Adjust display for Desktop */
+  @media screen and (min-width: 992px) {
+    header{
+      flex-direction: row;
+      background-color: var(--nav-color);
+      padding: 30px 0;
+    }
+
+    header h1{
+      flex: 0 0 25%;
+      text-align: right;
+    }
+
+    header nav{
+      flex: 0 0 75%;
+      text-align: right;
+    }
+
+    .main-container section{
+      flex-direction: row;
+      margin: 10px 0;
+    }
+
+    .main-container section h2{
+      text-align: right;
+      padding-right: 10px;
+      flex: 0 0 15%;
+    }
+
+    .main-container section div{
+      flex: 0 0 85%;
+    }
+
+    .main-container section h2{
+      border-bottom: none;
+      border-right: 3px solid;
+    }
+
+  }
