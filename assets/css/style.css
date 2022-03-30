@@ -38,11 +38,11 @@
     padding: 25px;
   }
 
-  header nav a{
+  a{
     display: inline-block;
     color: var(--header-color);
     font-weight: bold;
-    padding: 5px 5px 0px 5px;
+    margin: 5px;
     border-bottom: 3px solid;
     text-decoration: none;
   }
@@ -51,15 +51,15 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 30vh;
     object-fit: cover;
   }
 
   .main-container{
     display: flex;
     flex-direction: column;
-    padding:10px;
+    padding:20px;
   }
 
   .main-container section{
@@ -68,7 +68,7 @@
   } 
 
   .main-container section h2{
-    font-size: 24px;
+    font-size: 28px;
     color: var(--nav-color);
     font-weight: bold;
     padding: 10px 0px;
@@ -82,22 +82,75 @@
     margin: 10px;
   }
 
-  .work-box{
-      width: 100%;
-      border: 2px solid black;
+  .showcase-item{
+    width: 100%;
+    border: 6px solid var(--nav-color);
+    position: relative;
+    margin: 1%;
+  }
+
+  .showcase-item img{
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+    display: block;
+  }
+
+  .showcase-item .label{
+    position: absolute;
+    display: block;
+    height: 40%;
+    width: 40%;
+    bottom: 10%;
+    left: -10px;
+    color: var(--header-color);
+    background-color: var(--nav-color);
+  }
+  .showcase-item .label h3{
+    padding: 2% 0;
+    font-size: .75em;
+  }
+
+  .showcase-item .label p{
+    padding: 2% 0;
+    font-size: .75em;
+  }
+
+  .showcase-item:hover{
+    border: 6px solid var(--asparagus);
   }
 
   /* Adjust display for Tablet */
   @media screen and (min-width: 768px) {
     /* on tablets, set columns to only be 50% of the width and not grow */
-    .work-box {
-      flex: 0 0 50%;
-      max-width: 50%;
+    .showcase-item {
+      flex: 0 0 48%;
+      max-width: 48%;
     }
 
-    .big-project{
-      flex: 0 0 100%;
-      max-width: 100%;
+    .main-showcase-item{
+      flex: 0 0 98%;
+      max-width: 98%;
+    }
+
+    .main-showcase-item img{
+      height: 40vh;
+    }
+
+    .showcase-item .label h3{
+      font-size: .85em;
+    }
+  
+    .showcase-item .label p{
+      font-size: .85em;
+    }
+  
+    .main-showcase-item .label h3{
+      font-size: 1.2em;
+    }
+  
+    .main-showcase-item .label p{
+      font-size: 1.2em;
     }
 
   }
@@ -122,7 +175,7 @@
 
     .main-container section{
       flex-direction: row;
-      margin: 10px 0;
+      margin: 10px 100px 0 0;
     }
 
     .main-container section h2{
@@ -135,9 +188,25 @@
       flex: 0 0 85%;
     }
 
-    .main-container section h2{
+    .main-container section h2{ 
       border-bottom: none;
       border-right: 3px solid;
+    }
+
+    .showcase-item .label h3{
+      font-size: 1em;
+    }
+  
+    .showcase-item .label p{
+      font-size: 1em;
+    }
+  
+    .main-showcase-item .label h3{
+      font-size: 2em;
+    }
+  
+    .main-showcase-item .label p{
+      font-size: 2em;
     }
 
   }
